@@ -11,13 +11,13 @@ import csv
 
 
 # read data file
-with open('/Users/mcrey/bootcamp/work/challenges/03-Python/python-challenge/PyBank/Resources/budget_data.csv') as file:
+with open('/Users/mcrey/bootcamp/work/challenges/03-Python/python-challenge/PyBank/Resources/budget_data.csv') as data_file:
     
     months_list = []
     monthly_profits_list = []
     MoM_changes_list = []
     
-    data = csv.reader(file)
+    data = csv.reader(data_file)
 
 
     # process reader object into separate lists for each column, excluding column headers
@@ -59,3 +59,12 @@ with open('/Users/mcrey/bootcamp/work/challenges/03-Python/python-challenge/PyBa
     print(f"Greatest Increase in Profits: {max_increase_date} (${max_MoM_increase})")
     print(f"Greatest Decrease in Profits: {max_decrease_date} (${max_MoM_decrease})")
     
+    with open('analysis/results_file.txt', 'w') as results_file:
+        print("Financial Analysis",file=results_file)
+        print("----------------------------",file=results_file)
+        print(f"Total Months: {total_months}",file=results_file)
+        print(f"Total: {total_profits}",file=results_file)
+        print(f"Average Change: ${avg_MoM_change}",file=results_file)
+        print(f"Greatest Increase in Profits: {max_increase_date} (${max_MoM_increase})",file=results_file)
+        print(f"Greatest Decrease in Profits: {max_decrease_date} (${max_MoM_decrease})",file=results_file)
+        
