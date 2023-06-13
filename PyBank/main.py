@@ -7,10 +7,12 @@ max_MoM_decrease = 0
 
 
 # import CSV module for reading data file
+
 import csv
 
 
 # read data file
+
 with open('/Users/mcrey/bootcamp/work/challenges/03-Python/python-challenge/PyBank/Resources/budget_data.csv') as data_file:
     
     months_list = []
@@ -21,6 +23,7 @@ with open('/Users/mcrey/bootcamp/work/challenges/03-Python/python-challenge/PyBa
 
 
     # process reader object into separate lists for each column, excluding column headers
+
     for row in data:
         
         if row[0] != 'Date':

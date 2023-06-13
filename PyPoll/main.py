@@ -18,7 +18,7 @@ with open('/Users/mcrey/bootcamp/work/challenges/03-Python/python-challenge/PyPo
     data = csv.reader(vote_file)
 
 
-    # process reader object into list of candidates, adding total votes per candidate
+    # process reader object into list of candidates, adding total votes per candidate and calculating vote share (%) for each
 
     for row in data:
 
@@ -39,6 +39,8 @@ with open('/Users/mcrey/bootcamp/work/challenges/03-Python/python-challenge/PyPo
                 vote_count_list.append(1)
                 vote_share_list.append(1 / total_votes)
                 
+
+# print results to terminal and to text file
 
     candidate_count = len(candidate_list)
     
